@@ -15,7 +15,8 @@ app.use(passport.initialize());
 passport.use(new github2Strategy({
     clientID: config.GITHUB_CLIENT_ID,
     clientSecret: config.GITHUB_CLIENT_SECRET,
-    callbackURL: config.GITHUB_CALLBACK_URL
+    callbackURL: "http://localhost:3000/api/auth/github/callback"
+
 },(accessToken, refreshToken, profile, done)=>{
 return done(null,profile);
 }));
