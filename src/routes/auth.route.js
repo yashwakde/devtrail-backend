@@ -15,4 +15,7 @@ router.get('/github/callback',
    authController.githubAuthCallback
  );
 
+
+ router.post("/login",authController.loginUser);
+ router.get("/logout",authController.logoutUser);
  export default router;
